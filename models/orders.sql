@@ -6,8 +6,8 @@ select
     p.Amount/100. as AmountInUsd,
     p.Payment_Status
 from 
-    {{ source('jaffle_shop', 'stg_orders') }} o
-    left join {{ source('stripe', 'stg_stripe_payment') }} p
+    {{ ref('stg_orders') }} o
+    left join {{ ref('stg_stripe_payment') }} p
         on o.order_id = p.order_id
         and payment_status ilike 'success'
     -- and status ilike 'completed'
