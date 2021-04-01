@@ -37,8 +37,4 @@ sources:
   - name: jaffle_shop
     tables:
       - name: stg_orders
-      - name: customers
-
-  - name: stripe
-    tables:
       - name: stg_stripe_payment
