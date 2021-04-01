@@ -3,9 +3,9 @@ version: 2
 sources:
   - name: jaffle_shop
     tables:
-      - name: orders
+      - name: stg_orders
       - name: customers
 
   - name: stripe
     tables:
-      - name: payments
+      - name: stg_stripe_payment
