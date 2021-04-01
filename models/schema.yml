@@ -5,14 +5,14 @@ sources:
     database: raw
     tables:
       - name: customers
-        description:  table about customers
+        description: foo
         columns:
           - name: id
-          description:  unique identifier
+            description:  customer id
           - name: first_name
-          description:  first name of customer
+            description:  first name of customer
           - name: last_name
-          description:  last name of customer
+            description:  last name of customer
       - name: orders
 
 models:
