@@ -29,7 +29,7 @@ customer_orders as (
 
 final as (
 
-    select
+    select 
         customers.customer_id,
         customers.first_name,
         customers.last_name,
