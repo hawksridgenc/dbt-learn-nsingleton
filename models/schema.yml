@@ -1,5 +1,20 @@
 version: 2
 
+sources:
+  - name: jaffle_shop
+    database: raw
+    tables:
+      - name: customers
+        description: table about customers
+        columns:
+          - name: id
+          description: unique identifier
+          - name: first_name
+          description: first name of customer
+          - name: last_name
+          description: last name of customer
+      - name: orders
+
 models:
   - name: customers
     description: One record per customer
@@ -33,8 +48,3 @@ models:
         tests:
           - accepted_values:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
-sources:
-  - name: jaffle_shop
-    tables:
-      - name: stg_orders
-      - name: stg_stripe_payment
